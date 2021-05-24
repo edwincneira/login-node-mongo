@@ -11,3 +11,9 @@ npm i passport-local
 npm i bcrypt.js --> modulo para encriptar la clave
 
 npm i connect-flash --> enviar mensajes entre multiples vistas
+
+base de datos:
+
+windows -> mongod
+linux -> sudo service mongod start
+
