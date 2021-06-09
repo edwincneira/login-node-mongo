@@ -17,3 +17,13 @@ base de datos:
 windows -> mongod
 linux -> sudo service mongod start
 
+Leer la base de datos:
+
+Mongodb:
+
+use notes-db-app
+show collections
+'notes'
+db.notes.find().pretty()
+
+me muestran los datps

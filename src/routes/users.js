@@ -1,12 +1,23 @@
-const express = require('express');
-const router = express.Router();
+const { Router } = require("express");
+const {
+  renderSignUpForm,
+  singup,
+  renderSigninForm,
+  signin,
+  logout,
+} = require("../controlers/users");
 
-router.get('/users/sigin', (req, res) => {
-    res.send('Ingresando a la app');
-});
+const router = Router();
 
-router.get('/users/signup', (req, res) => {
-    res.send('Registrando en la app');
-})
+// Routes
+router.get("/users/signup", renderSignUpForm);
+
+router.post("/users/signup", singup);
+
+router.get("/users/signin", renderSigninForm);
+
+router.post("/users/signin", signin);
+
+router.get("/users/logout", logout);
 
 module.exports = router;
