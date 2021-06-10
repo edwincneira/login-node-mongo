@@ -27,3 +27,5 @@ show collections
 db.notes.find().pretty()
 
 me muestran los datps
+
+//cambio desde ubuntu
