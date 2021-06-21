@@ -10,7 +10,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx nodemon src/index.js",
-    "start": "nodemon -r esm src/index.js"
+    "start": "nodemon -r esm src/index.js",
+    "base": "nodemon -r esm src/database.js"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,7 @@
     "bcrypt": "^5.0.1",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^4.4.1",
+    "cookie-parser": "^1.4.5",
     "dotenv": "^10.0.0",
     "esm": "^3.2.25",
     "express": "^4.17.1",

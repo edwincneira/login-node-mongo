@@ -1,17 +1,18 @@
-const mongoose = require("mongoose");
-const config = require("./config");
+import mongoose from "mongoose"
+import configurations from "./config"
+
+const { PORT, MONGODB_DATABASE_NAME, MONGODB_URI, MONGODB_HOST} = configurations;
 
 (async () => {
   try {
-    const db = await mongoose.connect(config.MONGODB_URI, {
+    const db = await mongoose.connect(MONGODB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useFindAndModify: false,
       useCreateIndex: true,
     });
-    console.log("Mongodb is connected to", db.connection.host);
+    console.log("Mongodb connected", MONGODB_DATABASE_NAME);
   } catch (error) {
     console.error(error);
-  }
+  } 
 })();
-

@@ -1,5 +1,4 @@
-import mongoose from "mongoose";
-const { Schema, model } = mongoose;
+import { Schema, model } from "mongoose";
 
 //Use data
 const NoteSchema = new Schema({
@@ -17,5 +16,5 @@ const NoteSchema = new Schema({
     },
 }
 );
-const Modelo = model("Note", NoteSchema);
-export { Modelo };
+
+export default model("Note", NoteSchema);

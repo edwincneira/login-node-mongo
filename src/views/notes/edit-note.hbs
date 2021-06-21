@@ -13,7 +13,8 @@
       <h3>Edit Note</h3>
     </div>
     <div class="card-body">
-      <form action="/notes/edit-note/{{note._id}}?_method=PUT" method="POST">
+      {{!-- ?_method=PUT es necesario para actualizar el dato --}}
+      <form action="/notes/edit-note/{{note._id}}?_method=PUT" method="POST"> 
         <input type="hidden" name="_method" value="PUT">
         <div class="form-group">
           <input type="text" name="title" class="form-control" value="{{note.title}}"/>

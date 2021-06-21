@@ -1,14 +1,14 @@
 // Read environment variables
-const { config } = require("dotenv");
+import { config } from "dotenv"
 config();
 
 const configurations = {
-  PORT: process.env.PORT || 4000,
+  PORT: process.env.PORT || 3000,
   MONGODB_HOST: process.env.MONGODB_HOST || "localhost",
-  MONGODB_DATABASE: process.env.MONGODB_DB || "notes-app",
+  MONGODB_DATABASE_NAME: process.env.MONGODB_DATABASE_NAME || "notion-aplication",
   MONGODB_URI: `mongodb://${process.env.MONGODB_HOST || "localhost"}/${
-    process.env.MONGODB_DATABASE || "notes-app"
+    process.env.MONGODB_DATABASE_NAME|| "notion-aplication"
   }`,
 };
 
-module.exports = configurations;
+export default configurations
